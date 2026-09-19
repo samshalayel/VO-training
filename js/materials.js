@@ -7,6 +7,15 @@ export const mats = {
   ceilingMaterial: null,
   neonCyan: null,
   neonMagenta: null,
+  walnut: null,
+  deskTop: null,
+  blackMetal: null,
+  chrome: null,
+  leather: null,
+  leatherStitch: null,
+  fabric: null,
+  screen: null,
+  neonWarm: null,
 };
 
 // Initialize all materials
@@ -39,6 +48,73 @@ export function initMaterials() {
 
   mats.neonMagenta = new THREE.MeshBasicMaterial({
     color: 0xff2bd6,
+  });
+
+  // Furniture materials
+  // Walnut wood for desk base
+  mats.walnut = new THREE.MeshStandardMaterial({
+    color: 0x3e2723,
+    metalness: 0,
+    roughness: 0.4,
+  });
+
+  // Dark glass top for desk
+  mats.deskTop = new THREE.MeshStandardMaterial({
+    color: 0x1a1a1a,
+    metalness: 0.1,
+    roughness: 0.2,
+    transparent: true,
+    opacity: 0.9,
+  });
+
+  // Black metal for drawer handles and parts
+  mats.blackMetal = new THREE.MeshStandardMaterial({
+    color: 0x0a0a0a,
+    metalness: 0.8,
+    roughness: 0.3,
+  });
+
+  // Chrome for shiny metal parts
+  mats.chrome = new THREE.MeshStandardMaterial({
+    color: 0xcccccc,
+    metalness: 0.95,
+    roughness: 0.1,
+  });
+
+  // Leather for chairs
+  mats.leather = new THREE.MeshStandardMaterial({
+    color: 0x1a1a1a,
+    metalness: 0,
+    roughness: 0.6,
+  });
+
+  // Leather with stitching appearance
+  mats.leatherStitch = new THREE.MeshStandardMaterial({
+    color: 0x1a1a1a,
+    metalness: 0,
+    roughness: 0.65,
+    map: null, // Could add texture map here
+  });
+
+  // Dark blue fabric for guest chairs
+  mats.fabric = new THREE.MeshStandardMaterial({
+    color: 0x0d1b2a,
+    metalness: 0,
+    roughness: 0.8,
+  });
+
+  // Dark blue emissive screen material
+  mats.screen = new THREE.MeshStandardMaterial({
+    color: 0x001a33,
+    emissive: 0x0033ff,
+    emissiveIntensity: 0.3,
+    metalness: 0.2,
+    roughness: 0.3,
+  });
+
+  // Warm neon color
+  mats.neonWarm = new THREE.MeshBasicMaterial({
+    color: 0xffa500,
   });
 }
 
