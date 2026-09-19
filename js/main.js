@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { initMaterials } from './materials.js';
 import { createRoom } from './room.js';
+import { addFurniture } from './furniture.js';
 
 // Initialize scene
 const scene = new THREE.Scene();
@@ -30,6 +31,9 @@ initMaterials();
 
 // Create room (floor, walls, ceiling, lighting)
 createRoom(scene);
+
+// Add furniture to scene
+addFurniture(scene);
 
 // Loading screen management
 const loadingScreen = document.getElementById('loading-screen');
