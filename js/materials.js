@@ -41,13 +41,15 @@ export function initMaterials() {
     roughness: 1,
   });
 
-  // Neon colors for future use
+  // Neon colors - not affected by tone mapping
   mats.neonCyan = new THREE.MeshBasicMaterial({
     color: 0x00e5ff,
+    toneMapped: false,
   });
 
   mats.neonMagenta = new THREE.MeshBasicMaterial({
     color: 0xff2bd6,
+    toneMapped: false,
   });
 
   // Furniture materials
